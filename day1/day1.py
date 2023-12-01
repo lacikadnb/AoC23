@@ -4,7 +4,7 @@ val_list = []
 for row in input:
     numbers = []
     for char in row:
-        if char.isnumeric:
+        if char.isnumeric():
             numbers.append(char)
     val_list.append(int(f'{numbers[0]}{numbers[-1]}'))
 print("Sum of calib. values", sum(val_list))
