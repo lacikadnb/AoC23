@@ -2,7 +2,7 @@ import re
 
 string_digits = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9}
 
-def replace_numbers(str: row):
+def replace_numbers(row: str):
     for v,k in string_digits.items():
         re.sub(v, k, row)
     return row
