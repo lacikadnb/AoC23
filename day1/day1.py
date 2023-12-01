@@ -6,5 +6,6 @@ for row in input:
     for char in row:
         if char.isnumeric():
             numbers.append(char)
+    print(numbers)
     val_list.append(int(f'{numbers[0]}{numbers[-1]}'))
 print("Sum of calib. values", sum(val_list))
