@@ -19,6 +19,6 @@ for row in input:
             numbers.append(char)
     print(numbers)
     if numbers:
-	    print(int(f'{numbers[0]}{numbers[-1]}'))
-    	val_list.append(int(f'{numbers[0]}{numbers[-1]}'))
+        print(int(f'{numbers[0]}{numbers[-1]}'))
+        val_list.append(int(f'{numbers[0]}{numbers[-1]}'))
 print("Sum of calib. values", sum(val_list))
