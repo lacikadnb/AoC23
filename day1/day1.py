@@ -1,7 +1,17 @@
+import re
+
+string_digits = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9}
+
+def replace_numbers(string):
+    for v,k in string_digits:
+        re.sub(v, k, string)
+    return string
+            
 with open("day1.txt", "r+") as file:
     input = file.read().split("\n")
 val_list = []
 for row in input:
+    row = replace_numbers(row)
     numbers = []
     for char in row:
         if char.isnumeric():
