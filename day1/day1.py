@@ -4,7 +4,7 @@ string_digits = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6,
 
 def replace_numbers(str: row):
     for v,k in string_digits.items():
-        re.sub(v, k, string)
+        re.sub(v, k, row)
     return row
             
 with open("day1.txt", "r+") as file:
