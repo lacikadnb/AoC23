@@ -7,12 +7,14 @@ with open("input.txt", "r+") as file:
 val_list = []
 for row in data_input:
     numbers = {}
+    # ------------------------------------------ Part 2 start --------------------------------------------------- #
     # Scan for written numbers
     for k, v in string_digits.items():
         if re.search(k, row):
             indexes = [m.start(0) for m in re.finditer(k, row)]
             for i in indexes:
                 numbers[i] = str(v)
+    # ------------------------------------------ Part 2 end ---------------------------------------------------- #
     # Scan for arabic numbers
     for num, char in enumerate(row):
         if char.isnumeric():
