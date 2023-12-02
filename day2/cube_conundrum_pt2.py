@@ -15,6 +15,7 @@ for row in data_input:
         matches = re.findall(r'(\d+)\s*([a-zA-Z]+)', group)
         for match in matches:
             number, word = match
+
             if result[word.strip()] in results:
                 if result[word.strip()] > int(number):
                     result[word.strip()] = int(number)
