@@ -11,15 +11,14 @@ for row in data_input:
     # Scan for written numbers
     for k, v in string_digits.items():
         if re.search(k, row):
-            indexes = [m.start(0) for m in re.finditer(k, row)]
+            indexes = [x.start(0) for x in re.finditer(k, row)]
             for i in indexes:
                 numbers[i] = str(v)
     # ------------------------------------------ Part 2 end ---------------------------------------------------- #
     # Scan for arabic numbers
-    for num, char in enumerate(row):
+    for i, char in enumerate(row):
         if char.isnumeric():
-            numbers[num] = char
-    sorted_numbers = dict(sorted(numbers.items())) # NOQA
-    numbers = list(sorted_numbers.values())
-    val_list.append(int(f'{numbers[0]}{numbers[-1]}'))
+            numbers[i] = char
+    sorted_numbers = sorted(numbers.items())
+    val_list.append(int(f'{sorted_numbers[0][1]}{sorted_numbers[-1][1]}'))
 print("Sum of calib. values", sum(val_list))
